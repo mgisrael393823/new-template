@@ -1,12 +1,18 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
 // This is a placeholder for the BlurredVisualization component 
 // that will show charts/visualizations without blurring
+interface BlurredVisualizationProps {
+  children: ReactNode;
+  title: string;
+  description?: string;
+}
+
 export function BlurredVisualization({ 
   children, 
   title, 
   description 
-}) {
+}: BlurredVisualizationProps) {
   return (
     <div className="border border-[#E8E3D9] rounded-sm p-6 bg-white relative overflow-hidden">
       {/* Title and description */}

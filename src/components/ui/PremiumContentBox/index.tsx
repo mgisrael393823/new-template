@@ -1,6 +1,11 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
-export function PremiumContentBox({ children, title }) {
+interface PremiumContentBoxProps {
+  children: ReactNode;
+  title: string;
+}
+
+export function PremiumContentBox({ children, title }: PremiumContentBoxProps) {
   return (
     <div className="border border-[#E8E3D9] rounded-sm overflow-hidden mb-8">
       <div className="bg-[#151617] text-white p-4">

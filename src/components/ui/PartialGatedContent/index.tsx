@@ -1,14 +1,22 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
 // This is a placeholder for the PartialGatedContent component 
 // that will show content without gating
+interface PartialGatedContentProps {
+  visibleContent: ReactNode;
+  gatedContent: ReactNode;
+  title: string;
+  teaser: string;
+  previewPoints?: string[];
+}
+
 export function PartialGatedContent({ 
   visibleContent, 
   gatedContent,
   title,
   teaser,
   previewPoints = []
-}) {
+}: PartialGatedContentProps) {
   return (
     <div className="relative">
       {/* Visible content at the top */}

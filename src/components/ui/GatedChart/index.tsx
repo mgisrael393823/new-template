@@ -1,8 +1,14 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
 // This is a placeholder for the GatedChart component 
 // that will show charts without gating
-export function GatedChart({ children, title, description }) {
+interface GatedChartProps {
+  children: ReactNode;
+  title: string;
+  description?: string;
+}
+
+export function GatedChart({ children, title, description }: GatedChartProps) {
   return (
     <div className="relative mb-8">
       {/* Chart header */}
