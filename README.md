@@ -16,40 +16,61 @@ A flexible and customizable template for creating property-specific strategic bl
    npm run setup
    ```
 
-3. **Development**
+3. **Content Creation**
+   ```bash
+   # Create content templates for each section
+   node scripts/create-content.js
+   ```
+
+4. **Development**
    ```bash
    # Start the development server
    npm run dev
    ```
 
-4. **Building for Production**
+5. **Building for Production**
    ```bash
    # Build the project
    npm run build
    ```
 
+## Replication Workflow
+
+To create a new property blueprint:
+
+1. **Copy the Template**: Clone or copy this repository to a new directory
+2. **Install Dependencies**: Run `npm install`
+3. **Configure Property Details**: Run `npm run setup` and follow the interactive prompts
+4. **Generate Content Templates**: Run `node scripts/create-content.js`
+5. **Customize Content**: Edit the markdown files in `src/content/`
+6. **Preview**: Run `npm run dev` to see your changes
+7. **Deploy**: Build and deploy using your preferred method
+
 ## Project Structure
 
 - **`/config`**: Property-specific configuration
   - `building-config.js`: Central configuration file for all property details
+  - `building-config.template.js`: Template for new property configurations
 
 - **`/public`**: Static assets
   - Images, documents, and other public files
 
 - **`/scripts`**: Utility scripts
   - `setup.js`: Interactive setup wizard
+  - `create-content.js`: Content template generator
   - `export-pdf.js`: PDF export utility
-  - `create-template.js`: Template creation utility
 
 - **`/src`**: Source code
   - **`/components`**: React components
-    - `/GatedContent`: Content gating components (modified to show all content)
+    - `/GatedContent`: Content gating components
     - `/Home`: Homepage components
-    - `/Layout`: Layout components
+    - `/Layout`: Layout components (including sidebar navigation)
     - `/ui`: UI components (buttons, cards, charts, etc.)
   - **`/content`**: Markdown content for each section
+    - `template.md`: Template for new content sections
   - **`/hooks`**: Custom React hooks
   - **`/lib`**: Utility functions
+    - `markdown.ts`: Markdown loading utilities
   - **`/pages`**: Next.js pages
   - **`/styles`**: Global styles
   - **`/templates`**: Page templates
@@ -79,11 +100,11 @@ Each section of the blueprint has its own markdown file in the `src/content` dir
 6. **Go-to-Market Roadmap**: `go-to-market.md`
 7. **Opportunity Map**: `opportunity-map.md`
 
-Edit these files to customize the content for your specific property.
+Use the `scripts/create-content.js` utility to generate template content for each section, then customize it for your specific property.
 
 ## Styling
 
-The project uses Tailwind CSS for styling, with a custom color palette and design system. The main configuration file is `tailwind.config.ts`.
+The project uses Tailwind CSS for styling, with a custom color palette and design system. Colors are automatically pulled from the `building-config.js` file to ensure consistent branding. The main configuration file is `tailwind.config.ts`.
 
 ## Scripts
 
@@ -93,6 +114,7 @@ The project uses Tailwind CSS for styling, with a custom color palette and desig
 - **`npm run lint`**: Run linting
 - **`npm run setup`**: Run the interactive setup wizard
 - **`npm run export-pdf`**: Export the entire blueprint as a PDF
+- **`node scripts/create-content.js`**: Create content templates for sections
 
 ## Deployment
 
@@ -103,17 +125,14 @@ This project can be deployed to any platform that supports Next.js, including:
 - AWS Amplify
 - Self-hosted server
 
-For deployment instructions, see the `DEPLOYMENT.md` file.
+## Best Practices for Replication
 
-## Customization
-
-For advanced customization, see the `CUSTOMIZATION.md` file, which provides guidance on:
-
-- Adding new sections
-- Customizing the layout
-- Adding new components
-- Changing the design system
-- Adapting for different property types
+1. **Keep Property Details in Config**: All property-specific information should be in `building-config.js`
+2. **Use Variables in Content**: Reference property details in markdown using placeholders
+3. **Create New Branch/Repo**: For each property, create a new branch or repository
+4. **Use Git for Version Control**: Commit changes frequently to track progress
+5. **Maintain Section Structure**: Keep consistent structure across different property blueprints
+6. **Document Special Customizations**: Note any property-specific customizations
 
 ## License
 

@@ -2,6 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Import Montserrat Font */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-Variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat Fallback';
+  src: url('/fonts/MontserratFallback-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Atlassian Sans';
+  src: url('/fonts/AtlassianSans-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer base {
   :root {
     --background: 40 33% 98%;
@@ -57,5 +82,15 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: Montserrat, 'Montserrat Fallback', 'Atlassian Sans', sans-serif;
+  }
+  
+  /* Typography utility classes */
+  .font-montserrat {
+    font-family: Montserrat, 'Montserrat Fallback', sans-serif;
+  }
+  
+  .font-atlassian {
+    font-family: 'Atlassian Sans', 'Montserrat Fallback', sans-serif;
   }
 }

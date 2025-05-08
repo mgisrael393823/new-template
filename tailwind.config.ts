@@ -9,6 +9,11 @@ const config: Config = {
   ],
   theme: {
   	extend: {
+        fontFamily: {
+          sans: ['Montserrat', 'Montserrat Fallback', 'Atlassian Sans', 'sans-serif'],
+          montserrat: ['Montserrat', 'Montserrat Fallback', 'sans-serif'],
+          atlassian: ['Atlassian Sans', 'Montserrat Fallback', 'sans-serif'],
+        },
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
@@ -90,6 +95,6 @@ const config: Config = {
   		}
   	}
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require('@tailwindcss/typography')],
 };
 export default config;

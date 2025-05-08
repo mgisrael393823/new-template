@@ -6,74 +6,94 @@
 
 const buildingConfig = {
   // Basic Information
-  name: "BUILDING_NAME", // Example: "SOL Modern"
+  name: "Aspen Heights", 
   location: {
-    address: "BUILDING_ADDRESS", // Example: "50 E Fillmore St"
-    neighborhood: "NEIGHBORHOOD", // Example: "Roosevelt Row"
-    city: "CITY", // Example: "Phoenix"
-    state: "STATE", // Example: "Arizona"
-    zip: "ZIP_CODE", // Example: "85004"
+    address: "250 Peachtree Street NE",
+    neighborhood: "Downtown",
+    city: "Atlanta",
+    state: "Georgia",
+    zip: "30303",
   },
   
   // Property Details
   details: {
-    units: 0, // Example: 747
-    stories: 0, // Example: 25
-    yearBuilt: 0, // Example: 2025 (projected)
-    propertyType: "PROPERTY_TYPE", // Example: "Multifamily"
-    propertyClass: "PROPERTY_CLASS", // Example: "Class A"
+    units: 324,
+    stories: 22,
+    yearBuilt: 2026, // projected
+    propertyType: "Multifamily",
+    propertyClass: "Class A",
   },
   
   // Branding
   branding: {
-    primaryColor: "#E57161", // Default coral accent
-    secondaryColor: "#151617", // Default dark
-    backgroundColor: "#FCFAF5", // Default cream
-    borderColor: "#E8E3D9", // Default light beige
-    textDarkColor: "#333333", // Default dark gray
-    textLightColor: "#777777", // Default medium gray
-    fontPrimary: "Montserrat", // Default font
-    tagline: "TAGLINE", // Example: "LEASE-UP STRATEGY BLUEPRINT"
+    primaryColor: "#3B7A57", // Forest green
+    secondaryColor: "#151617", // Dark grey/black
+    backgroundColor: "#FCFAF5", // Cream
+    borderColor: "#E8E3D9", // Light beige
+    textDarkColor: "#333333", // Dark gray
+    textLightColor: "#777777", // Medium gray
+    // Font options
+    fontPrimary: "Montserrat, 'Montserrat Fallback', sans-serif", // Default body font
+    fontHeadings: "Montserrat, 'Montserrat Fallback', sans-serif", // Font for headings
+    tagline: "ELEVATED URBAN LIVING",
   },
   
   // Contact Information
   contact: {
-    email: "CONTACT_EMAIL", // Example: "contact@example.com"
-    phone: "CONTACT_PHONE", // Example: "(555) 123-4567"
-    website: "WEBSITE_URL", // Example: "https://www.solmodern.com"
+    email: "leasing@aspenheightsatl.com",
+    phone: "(404) 555-7890",
+    website: "https://www.aspenheightsatl.com",
   },
   
   // Meta Information (for SEO)
   meta: {
-    title: "META_TITLE", // Example: "SOL Modern – Lease-Up Strategy & Competitive Blueprint"
-    description: "META_DESCRIPTION", // Example: "A comprehensive lease-up strategy and competitive blueprint for SOL Modern"
-    ogTitle: "OG_TITLE", // Example: "SOL MODERN | THE BLUEPRINT"
-    ogDescription: "OG_DESCRIPTION", // Example: "LEASE-UP STRATEGY BLUEPRINT"
+    title: "Aspen Heights – Luxury Apartment Living in Downtown Atlanta",
+    description: "A comprehensive marketing and lease-up strategy blueprint for Aspen Heights luxury apartments in Downtown Atlanta.",
+    ogTitle: "ASPEN HEIGHTS | PROPERTY BLUEPRINT",
+    ogDescription: "LUXURY APARTMENT LIVING IN DOWNTOWN ATLANTA",
   },
   
   // Market Information
   market: {
     competitiveSet: [
-      // Example: { name: "The Stewart", address: "800 N Central Ave", units: 312 }
+      { name: "The Novare", address: "300 Peachtree Street NE", units: 275 },
+      { name: "Centennial Place", address: "125 Luckie St NW", units: 240 },
+      { name: "The Georgian", address: "175 Forsyth St", units: 320 }
     ],
     targetDemographics: [
-      // Example: { name: "Young Professionals", ageRange: "25-40", incomeRange: "$75K-120K" }
+      { name: "Young Professionals", ageRange: "25-40", incomeRange: "$85K-150K" },
+      { name: "Empty Nesters", ageRange: "55-70", incomeRange: "$100K+" },
+      { name: "Medical Professionals", ageRange: "28-45", incomeRange: "$120K+" }
     ],
     keyAmenities: [
-      // Example: "Rooftop Pool", "Fitness Center", "Co-Working Space"
+      "Rooftop Infinity Pool & Lounge",
+      "24/7 Fitness Center with Peloton Bikes",
+      "Co-Working Spaces & Conference Room",
+      "Sky Lounge with Atlanta Skyline Views",
+      "Pet Spa & Dog Run"
     ],
   },
   
   // Property Specifications
   specifications: {
     unitMix: [
-      // Example: { type: "Studio", count: 100, sizeSqFtMin: 500, sizeSqFtMax: 600 }
+      { type: "Studio", count: 64, sizeSqFtMin: 550, sizeSqFtMax: 650 },
+      { type: "1 Bedroom", count: 120, sizeSqFtMin: 700, sizeSqFtMax: 850 },
+      { type: "2 Bedroom", count: 98, sizeSqFtMin: 1050, sizeSqFtMax: 1250 },
+      { type: "3 Bedroom", count: 42, sizeSqFtMin: 1400, sizeSqFtMax: 1650 }
     ],
     amenities: [
-      // Example: { name: "Pool", description: "Heated resort-style pool with cabanas" }
+      { name: "Rooftop Infinity Pool", description: "Heated infinity-edge pool with panoramic city views and private cabanas" },
+      { name: "Sky Lounge", description: "22nd floor lounge with demonstration kitchen, dining area, and outdoor terrace" },
+      { name: "Fitness Center", description: "State-of-the-art fitness center with cardio equipment, free weights, and studio space" },
+      { name: "Co-Working Space", description: "Private offices, conference room, and open work areas with high-speed internet" },
+      { name: "Pet Spa", description: "Pet washing stations, grooming area, and fenced outdoor dog run" }
     ],
     finishes: [
-      // Example: { category: "Kitchen", items: ["Quartz countertops", "Stainless steel appliances"] }
+      { category: "Kitchen", items: ["Quartz countertops", "Custom cabinetry", "Stainless steel appliances", "Gas ranges", "Wine refrigerators in select units"] },
+      { category: "Bathroom", items: ["Porcelain tile flooring", "Glass-enclosed showers", "Dual vanities in select units", "Soaking tubs in select units"] },
+      { category: "Flooring", items: ["Engineered hardwood in living areas", "Plush carpet in bedrooms", "Porcelain tile in bathrooms"] },
+      { category: "Technology", items: ["Smart thermostats", "Keyless entry", "Built-in USB outlets", "Pre-wired for high-speed internet"] }
     ],
   },
   
@@ -90,10 +110,10 @@ const buildingConfig = {
   
   // Timeline
   timeline: {
-    constructionStart: "CONSTRUCTION_START_DATE", // Example: "2023-06"
-    constructionComplete: "CONSTRUCTION_COMPLETE_DATE", // Example: "2025-02"
-    preLeasingStart: "PRE_LEASING_START_DATE", // Example: "2024-09"
-    leaseUpPeriod: "LEASE_UP_PERIOD", // Example: "12 months"
+    constructionStart: "2023-09",
+    constructionComplete: "2026-03",
+    preLeasingStart: "2025-10",
+    leaseUpPeriod: "14 months",
   },
 };
 

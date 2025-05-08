@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "setup": "node scripts/setup.js",
-    "export-pdf": "node scripts/export-pdf.js"
+    "export-pdf": "node scripts/export-pdf.js",
+    "create-content": "node scripts/create-content.js",
+    "new-property": "npm run setup && npm run create-content"
   },
   "dependencies": {
     "@faker-js/faker": "^9.4.0",
@@ -62,6 +64,7 @@
     "react-error-boundary": "^5.0.0",
     "react-hook-form": "^7.54.2",
     "react-intersection-observer": "^9.15.1",
+    "react-markdown": "^10.1.0",
     "react-resizable-panels": "^2.1.7",
     "recharts": "^2.15.1",
     "sonner": "^1.7.2",
@@ -73,6 +76,7 @@
     "zod": "^3.24.1"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.16",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
