@@ -1,0 +1,59 @@
+import React from "react";
+import { createContentPage } from "../templates/ContentPage.template";
+import buildingConfig from "../../config/building-config";
+
+// This will be populated from the markdown content
+const executiveSummaryContent = (
+  <>
+    <section>
+      <h2 className="text-2xl font-semibold mb-4">Overview</h2>
+      
+      <div className="bg-white border border-[#E8E3D9] p-6 rounded-md mb-8">
+        <p>
+          {buildingConfig.name} represents a premium {buildingConfig.details.propertyType} development 
+          located in the {buildingConfig.location.neighborhood} area of {buildingConfig.location.city}, 
+          {buildingConfig.location.state}. With {buildingConfig.details.units} units across 
+          {buildingConfig.details.stories} stories, the property is positioned to capture the growing demand 
+          for luxury multifamily housing in this rapidly evolving urban district.
+        </p>
+      </div>
+    </section>
+    
+    <section className="border-t border-[#E8E3D9] pt-8">
+      <h2 className="text-2xl font-semibold mb-4">Market Positioning</h2>
+      
+      <div className="bg-white border border-[#E8E3D9] p-6 rounded-md mb-8">
+        <p className="mb-4">The property will differentiate itself through:</p>
+        
+        <ul className="space-y-2">
+          <li className="flex items-start">
+            <span className="text-[#E57161] mr-2">•</span>
+            <span><strong>Location Advantage</strong>: Prime positioning in the {buildingConfig.location.neighborhood} district</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-[#E57161] mr-2">•</span>
+            <span><strong>Target Demographic</strong>: [EDIT: Primary demographic]</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-[#E57161] mr-2">•</span>
+            <span><strong>Premium Amenities</strong>: [EDIT: Key amenities]</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-[#E57161] mr-2">•</span>
+            <span><strong>Design Excellence</strong>: [EDIT: Design highlights]</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+    
+    {/* Additional sections would follow the same pattern */}
+  </>
+);
+
+export default createContentPage(
+  "Executive Summary",
+  `Executive summary for ${buildingConfig.name} blueprint strategy`,
+  `This executive summary outlines the core findings and strategic recommendations for ${buildingConfig.name}, 
+  providing a high-level overview of our comprehensive market analysis and implementation roadmap.`,
+  executiveSummaryContent
+);
