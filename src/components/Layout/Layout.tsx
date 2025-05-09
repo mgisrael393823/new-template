@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import buildingConfig from '../../../config/building-config';
+import { buildingConfig, buildingInfo } from '@/config/building';
+import { navigationItems, navigationConfig } from '@/config/navigation';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -11,17 +12,8 @@ export default function Layout({ children }: LayoutProps) {
   const router = useRouter();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
-  // Navigation items - can be extended as needed
-  const navigationItems = [
-    { title: "Home", path: "/" },
-    { title: "Executive Summary", path: "/executive-summary" },
-    { title: "Market Intelligence", path: "/market-intelligence" },
-    { title: "Competitive Landscape", path: "/competitive-landscape" },
-    { title: "Strategic Opportunities", path: "/strategic-opportunities" },
-    { title: "Pricing Framework", path: "/pricing-framework" },
-    { title: "Go-to-Market Roadmap", path: "/go-to-market" },
-    { title: "Opportunity Map", path: "/opportunity-map" },
-  ];
+  // Get sidebar configuration
+  const { mobileBreakpoint, defaultExpanded } = navigationConfig.variants.sidebar;
 
   return (
     <div className="min-h-screen flex flex-col md:flex-row">
@@ -34,9 +26,9 @@ export default function Layout({ children }: LayoutProps) {
       `}>
         <div className="p-6 border-b border-[#E8E3D9]">
           <Link href="/" className="flex flex-col">
-            <h1 className="text-xl font-semibold tracking-wide">{buildingConfig.name}</h1>
+            <h1 className="text-xl font-semibold tracking-wide">{buildingInfo.name}</h1>
             <div className="h-0.5 w-8 bg-[#3B7A57] mt-1"></div>
-            <p className="text-xs text-[#777777] mt-1">{buildingConfig.branding.tagline}</p>
+            <p className="text-xs text-[#777777] mt-1">{buildingInfo.tagline}</p>
           </Link>
         </div>
         
@@ -99,9 +91,8 @@ export default function Layout({ children }: LayoutProps) {
           <div className="max-w-7xl mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div>
-                <h3 className="text-lg font-semibold mb-4">{buildingConfig.name}</h3>
-                <p className="text-sm text-gray-300">{buildingConfig.location.address}<br/>
-                {buildingConfig.location.city}, {buildingConfig.location.state} {buildingConfig.location.zip}</p>
+                <h3 className="text-lg font-semibold mb-4">{buildingInfo.name}</h3>
+                <p className="text-sm text-gray-300">{buildingInfo.fullAddress}</p>
               </div>
               
               <div>
@@ -124,7 +115,7 @@ export default function Layout({ children }: LayoutProps) {
             </div>
             
             <div className="border-t border-[#333333] mt-8 pt-8 text-center text-sm text-gray-400">
-              © {new Date().getFullYear()} {buildingConfig.name}. All rights reserved.
+              © {new Date().getFullYear()} {buildingInfo.name}. All rights reserved.
             </div>
           </div>
         </footer>

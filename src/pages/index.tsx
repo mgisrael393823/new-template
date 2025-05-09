@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-import buildingConfig from "../../config/building-config";
+import { buildingConfig, buildingInfo } from "@/config/building";
 
 export default function Home() {
   // Pages with links to them in the navigation
@@ -18,20 +18,20 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>{buildingConfig.name} – Blueprint Strategy</title>
-        <meta name="description" content={`A comprehensive strategy blueprint for ${buildingConfig.name}`} />
+        <title>{buildingInfo.name} – Blueprint Strategy</title>
+        <meta name="description" content={buildingConfig.meta.description} />
       </Head>
       
       <main className="max-w-4xl mx-auto px-4 py-12">
-        <h1 className="text-3xl font-bold mb-2">{buildingConfig.name}</h1>
+        <h1 className="text-3xl font-bold mb-2">{buildingInfo.name}</h1>
         <div className="h-0.5 w-12 bg-[#E57161] mb-3"></div>
-        <p className="text-xl text-[#777777] mb-8">{buildingConfig.branding.tagline}</p>
+        <p className="text-xl text-[#777777] mb-8">{buildingInfo.tagline}</p>
         
         <div className="bg-[#FCFAF5] border border-[#E8E3D9] p-6 rounded-md mb-10">
           <p className="text-lg">
             This blueprint provides a comprehensive strategic framework designed to optimize 
             the lease-up process, identify competitive advantages, and provide actionable 
-            recommendations to maximize occupancy and rental revenue for {buildingConfig.name}.
+            recommendations to maximize occupancy and rental revenue for {buildingInfo.name}.
           </p>
         </div>
         
