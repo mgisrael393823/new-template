@@ -11,8 +11,8 @@ import {
   Home,
   MapPin
 } from 'lucide-react';
-import { navigationItems } from '@/lib/navigation';
-import buildingConfig from '../../../config/building-config';
+import { navigationItems } from '@/config/navigation';
+import { buildingConfig, buildingInfo } from '@/config/building';
 
 interface MobileNavigationProps {
   isOpen: boolean;

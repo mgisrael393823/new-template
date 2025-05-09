@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
-import { navigationItems, NavigationItem, SubsectionItem } from '@/lib/navigation';
-import buildingConfig from '../../../config/building-config';
+import { navigationItems } from '@/config/navigation';
+import { NavigationItem, SubsectionItem } from '@/types/navigation';
+import { buildingConfig, buildingInfo } from '@/config/building';
 import { 
   ChevronDown, 
   ChevronRight, 
@@ -114,9 +115,9 @@ export default function Sidebar({ isMobileMenuOpen, closeMobileMenu }: SidebarPr
     `}>
       <div className="p-6 border-b border-[#E8E3D9] flex items-center justify-between">
         <Link href="/" className="flex flex-col" onClick={closeMobileMenu}>
-          <h1 className="text-xl font-semibold tracking-wide">{buildingConfig.name}</h1>
+          <h1 className="text-xl font-semibold tracking-wide">{buildingInfo.name}</h1>
           <div className="h-0.5 w-8 bg-[#3B7A57] mt-1"></div>
-          <p className="text-xs text-[#777777] mt-1">{buildingConfig.branding.tagline}</p>
+          <p className="text-xs text-[#777777] mt-1">{buildingInfo.tagline}</p>
         </Link>
       </div>
       
