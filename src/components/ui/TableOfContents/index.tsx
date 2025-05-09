@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { ChevronUp, List } from 'lucide-react';
-import { NavigationItem, SubsectionItem } from '@/lib/navigation';
+import type { NavigationItem, SubsectionItem } from '@/types/navigation';
 import useMobile from '@/hooks/use-mobile';
 
 interface TableOfContentsProps {
