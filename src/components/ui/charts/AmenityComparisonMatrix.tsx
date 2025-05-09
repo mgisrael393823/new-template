@@ -1,17 +1,33 @@
 import React from 'react';
 import BaseChart from './BaseChart';
 import { getAmenityComparisonData } from '@/lib/chart-data-transformers';
-import buildingConfig from '../../../../config/building-config';
+import { buildingConfig, buildingInfo } from '@/config/building';
 import useMobile from '@/hooks/use-mobile';
 import { Check, X } from 'lucide-react';
+
+// Define property item in matrix
+interface PropertyAmenityItem {
+  property: string;
+  isTarget: boolean;
+  [key: string]: boolean | string; // Key is amenity key, value is whether property has it
+}
+
+// Define amenity name with key and display name
+interface AmenityNameItem {
+  key: string;
+  displayName: string;
+}
+
+// Define comprehensive amenity comparison data structure
+export interface AmenityComparisonData {
+  matrix: PropertyAmenityItem[];
+  amenityNames: AmenityNameItem[];
+}
 
 interface AmenityComparisonMatrixProps {
   title?: string;
   description?: string;
-  data?: {
-    matrix: any[];
-    amenityNames: { key: string; displayName: string }[];
-  };
+  data?: AmenityComparisonData;
   height?: number;
   showAccessibleTable?: boolean;
   highlightTarget?: boolean;
@@ -30,7 +46,7 @@ export default function AmenityComparisonMatrix({
   const isMobile = useMobile();
   
   // Use provided data or get from data transformer
-  const amenityData = data || getAmenityComparisonData();
+  const amenityData: AmenityComparisonData = data || getAmenityComparisonData();
   const { matrix, amenityNames } = amenityData;
   
   // Format data for accessible table (already in table format)

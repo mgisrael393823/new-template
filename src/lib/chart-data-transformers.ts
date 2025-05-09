@@ -227,7 +227,17 @@ export function getOccupancyTrendData(): OccupancyDataPoint[] {
  * Get amenity comparison data for matrix visualization
  * @returns Transformed amenity comparison data
  */
-export function getAmenityComparisonData(): any[] {
+export function getAmenityComparisonData(): {
+  matrix: Array<{
+    property: string;
+    isTarget: boolean;
+    [key: string]: boolean | string;
+  }>;
+  amenityNames: Array<{
+    key: string;
+    displayName: string;
+  }>;
+} {
   const { amenities } = buildingConfig.specifications;
   const { competitiveSet } = buildingConfig.market;
   
