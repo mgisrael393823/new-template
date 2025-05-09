@@ -1,20 +1,7 @@
 /**
  * Blueprint content search functionality
  */
-import { NavigationItem } from './navigation';
-
-export interface SearchResult {
-  id: string;
-  title: string;
-  content: string;
-  path: string;
-  section: string;
-  priority: number;
-  matches: {
-    text: string;
-    context: string;
-  }[];
-}
+import { NavigationItem, SearchResult } from '@/types/navigation';
 
 // Mock search index for client-side - in a real app, this would be fetched from an API
 export const mockSearchIndex: SearchResult[] = [

@@ -9,7 +9,7 @@ import {
   ArrowRight,
   FileText
 } from 'lucide-react';
-import { SearchResult } from '@/lib/navigation';
+import { SearchResult } from '@/types/navigation';
 import { clientSearch } from '@/lib/search';
 import useMobile from '@/hooks/use-mobile';
 
