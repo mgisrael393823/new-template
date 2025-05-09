@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { navigationItems } from '@/lib/navigation';
+import { navigationItems } from '@/config/navigation';
 import useMobile from '@/hooks/use-mobile';
 import { CheckCircle, Circle, Clock } from 'lucide-react';
 import Link from 'next/link';
