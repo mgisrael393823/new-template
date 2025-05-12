@@ -1,13 +1,10 @@
 # Go-to-Market Roadmap
 
+> **Note:** This content will be automatically populated by Terminal AI after analyzing your uploaded property report.
+
 ## Pre-Leasing Phase (3-6 Months Prior to Opening)
 
 ### Timing & Milestones
-
-- **6 Months Prior**: [MILESTONES]
-- **5 Months Prior**: [MILESTONES]
-- **4 Months Prior**: [MILESTONES]
-- **3 Months Prior**: [MILESTONES]
 
 ### Target Audience Prioritization
 

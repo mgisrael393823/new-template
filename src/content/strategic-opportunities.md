@@ -1,14 +1,10 @@
 # Strategic Opportunities
 
+> **Note:** This content will be automatically populated by Terminal AI after analyzing your uploaded property report.
+
 ## SWOT Analysis
 
 ### Strengths
-
-- [STRENGTH 1]
-- [STRENGTH 2]
-- [STRENGTH 3]
-- [STRENGTH 4]
-- [STRENGTH 5]
 
 ### Weaknesses
 

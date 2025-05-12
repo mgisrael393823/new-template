@@ -1,8 +1,8 @@
 # Competitive Landscape
 
-## Competitive Set Overview
+> **Note:** This content will be automatically populated by Terminal AI after analyzing your uploaded property report.
 
-[BUILDING_NAME] competes within a set of [NUMBER] properties in the [NEIGHBORHOOD] area of [CITY], [STATE].
+## Competitive Set Overview
 
 ## Primary Competitors
 

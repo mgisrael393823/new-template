@@ -1,12 +1,10 @@
 # Opportunity Map
 
+> **Note:** This content will be automatically populated by Terminal AI after analyzing your uploaded property report.
+
 ## Near-Term Opportunities (0-6 Months)
 
 ### Immediate Revenue Drivers
-
-- **[OPPORTUNITY 1]**: [DESCRIPTION]
-- **[OPPORTUNITY 2]**: [DESCRIPTION]
-- **[OPPORTUNITY 3]**: [DESCRIPTION]
 
 ### Quick-Win Experience Enhancements
 

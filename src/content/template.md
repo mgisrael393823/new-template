@@ -1,8 +1,8 @@
 # [SECTION_TITLE]
 
-## Overview
+> **Note:** This content will be automatically populated by Terminal AI after analyzing your uploaded property report.
 
-[PROPERTY_NAME] is positioned in the [NEIGHBORHOOD] area of [CITY], [STATE], offering [UNITS] units across [STORIES] stories. This section provides key insights into [SECTION_SPECIFIC_FOCUS].
+## Overview
 
 ## Key Points
 

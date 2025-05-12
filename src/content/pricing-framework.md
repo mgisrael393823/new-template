@@ -1,12 +1,10 @@
 # Pricing & Incentive Framework
 
+> **Note:** This content will be automatically populated by Terminal AI after analyzing your uploaded property report.
+
 ## Optimal Base Rent Positioning
 
 ### Unit Type Pricing Strategy
-
-- **Studios (Estimated [SIZE] sq ft)**: Position at $[PRICE]/sq ft
-- **One Bedrooms (Estimated [SIZE] sq ft)**: Target $[PRICE]/sq ft
-- **Two Bedrooms (Estimated [SIZE] sq ft)**: Place at $[PRICE]/sq ft
 
 ## Strategic Premium Allocation
 
